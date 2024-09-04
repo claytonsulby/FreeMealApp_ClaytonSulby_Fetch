@@ -6,11 +6,25 @@
 import Foundation
 
 // MARK: - Meals
-public struct FilterResponse: Codable {
-    let meals: [Meal]
+public struct FilterResponse: Codable, Equatable {
+    let meals: [FilterItem]
+    
+    public init(meals: [FilterItem] = []) {
+        self.meals = meals
+    }
+    
+    public static func == (lhs: FilterResponse, rhs: FilterResponse) -> Bool {
+        return lhs.meals == rhs.meals
+    }
 }
 
 // MARK: - Meal
-public struct Meal: Codable {
+public struct FilterItem: Codable, Equatable {
     let strMeal, strMealThumb, idMeal: String
+    
+    public static func == (lhs: FilterItem, rhs: FilterItem) -> Bool {
+        return lhs.strMeal == rhs.strMeal &&
+        lhs.strMealThumb == rhs.strMealThumb &&
+        lhs.idMeal == rhs.idMeal
+    }
 }

@@ -15,6 +15,12 @@
 		EC9ABA9B2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA9A2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift */; };
 		EC9ABAA52C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAA42C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift */; };
 		EC9ABAA72C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAA62C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift */; };
+		EC9ABAB62C88D0AF000F9C47 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAB52C88D0AF000F9C47 /* Api.swift */; };
+		EC9ABAB92C88D3A7000F9C47 /* FilterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAB82C88D3A7000F9C47 /* FilterResponse.swift */; };
+		EC9ABABB2C88D4A0000F9C47 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABABA2C88D4A0000F9C47 /* Agent.swift */; };
+		EC9ABABD2C88D4C3000F9C47 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABABC2C88D4C3000F9C47 /* NetworkError.swift */; };
+		EC9ABABF2C88D4F8000F9C47 /* DecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABABE2C88D4F8000F9C47 /* DecodeError.swift */; };
+		EC9ABAC22C88D60A000F9C47 /* LookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAC12C88D60A000F9C47 /* LookupResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		EC9ABAA02C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FreeMealApp-ClaytonSulby-FetchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9ABAA42C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchUITests.swift; sourceTree = "<group>"; };
 		EC9ABAA62C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC9ABAB52C88D0AF000F9C47 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		EC9ABAB82C88D3A7000F9C47 /* FilterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResponse.swift; sourceTree = "<group>"; };
+		EC9ABABA2C88D4A0000F9C47 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		EC9ABABC2C88D4C3000F9C47 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		EC9ABABE2C88D4F8000F9C47 /* DecodeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeError.swift; sourceTree = "<group>"; };
+		EC9ABAC12C88D60A000F9C47 /* LookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +110,12 @@
 			isa = PBXGroup;
 			children = (
 				EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */,
-				EC9ABA882C88CAFE000F9C47 /* ContentView.swift */,
-				EC9ABA8A2C88CAFE000F9C47 /* Item.swift */,
+				EC9ABAB42C88D090000F9C47 /* views */,
+				EC9ABAB32C88D081000F9C47 /* model */,
 				EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */,
 				EC9ABA8E2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_Fetch.entitlements */,
 				EC9ABA8F2C88CB00000F9C47 /* Preview Content */,
+				EC9ABAB72C88D0B4000F9C47 /* api */,
 			);
 			path = "FreeMealApp-ClaytonSulby-Fetch";
 			sourceTree = "<group>";
@@ -130,6 +143,43 @@
 				EC9ABAA62C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift */,
 			);
 			path = "FreeMealApp-ClaytonSulby-FetchUITests";
+			sourceTree = "<group>";
+		};
+		EC9ABAB32C88D081000F9C47 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA8A2C88CAFE000F9C47 /* Item.swift */,
+				EC9ABAB82C88D3A7000F9C47 /* FilterResponse.swift */,
+				EC9ABAC12C88D60A000F9C47 /* LookupResponse.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		EC9ABAB42C88D090000F9C47 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA882C88CAFE000F9C47 /* ContentView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		EC9ABAB72C88D0B4000F9C47 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABAB52C88D0AF000F9C47 /* Api.swift */,
+				EC9ABABA2C88D4A0000F9C47 /* Agent.swift */,
+				EC9ABAC02C88D511000F9C47 /* error */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		EC9ABAC02C88D511000F9C47 /* error */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABABC2C88D4C3000F9C47 /* NetworkError.swift */,
+				EC9ABABE2C88D4F8000F9C47 /* DecodeError.swift */,
+			);
+			path = error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +312,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9ABAB92C88D3A7000F9C47 /* FilterResponse.swift in Sources */,
+				EC9ABABD2C88D4C3000F9C47 /* NetworkError.swift in Sources */,
+				EC9ABAC22C88D60A000F9C47 /* LookupResponse.swift in Sources */,
+				EC9ABABF2C88D4F8000F9C47 /* DecodeError.swift in Sources */,
 				EC9ABA892C88CAFE000F9C47 /* ContentView.swift in Sources */,
 				EC9ABA8B2C88CAFE000F9C47 /* Item.swift in Sources */,
+				EC9ABABB2C88D4A0000F9C47 /* Agent.swift in Sources */,
+				EC9ABAB62C88D0AF000F9C47 /* Api.swift in Sources */,
 				EC9ABA872C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
