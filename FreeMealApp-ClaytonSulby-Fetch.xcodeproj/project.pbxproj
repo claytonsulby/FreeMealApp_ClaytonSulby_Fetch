@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC9ABA872C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */; };
+		EC9ABA892C88CAFE000F9C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA882C88CAFE000F9C47 /* ContentView.swift */; };
+		EC9ABA8B2C88CAFE000F9C47 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA8A2C88CAFE000F9C47 /* Item.swift */; };
+		EC9ABA8D2C88CB00000F9C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */; };
+		EC9ABA912C88CB00000F9C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9ABA902C88CB00000F9C47 /* Preview Assets.xcassets */; };
+		EC9ABA9B2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA9A2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift */; };
+		EC9ABAA52C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAA42C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift */; };
+		EC9ABAA72C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAA62C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC9ABA972C88CB00000F9C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC9ABA7B2C88CAFE000F9C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC9ABA822C88CAFE000F9C47;
+			remoteInfo = "FreeMealApp-ClaytonSulby-Fetch";
+		};
+		EC9ABAA12C88CB00000F9C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC9ABA7B2C88CAFE000F9C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC9ABA822C88CAFE000F9C47;
+			remoteInfo = "FreeMealApp-ClaytonSulby-Fetch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC9ABA832C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreeMealApp-ClaytonSulby-Fetch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchApp.swift; sourceTree = "<group>"; };
+		EC9ABA882C88CAFE000F9C47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC9ABA8A2C88CAFE000F9C47 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC9ABA8E2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_Fetch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreeMealApp_ClaytonSulby_Fetch.entitlements; sourceTree = "<group>"; };
+		EC9ABA902C88CB00000F9C47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC9ABA962C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FreeMealApp-ClaytonSulby-FetchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9ABA9A2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchTests.swift; sourceTree = "<group>"; };
+		EC9ABAA02C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FreeMealApp-ClaytonSulby-FetchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9ABAA42C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchUITests.swift; sourceTree = "<group>"; };
+		EC9ABAA62C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC9ABA802C88CAFE000F9C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9ABA932C88CB00000F9C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9ABA9D2C88CB00000F9C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC9ABA7A2C88CAFE000F9C47 = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA852C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch */,
+				EC9ABA992C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests */,
+				EC9ABAA32C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests */,
+				EC9ABA842C88CAFE000F9C47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC9ABA842C88CAFE000F9C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA832C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch.app */,
+				EC9ABA962C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests.xctest */,
+				EC9ABAA02C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC9ABA852C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */,
+				EC9ABA882C88CAFE000F9C47 /* ContentView.swift */,
+				EC9ABA8A2C88CAFE000F9C47 /* Item.swift */,
+				EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */,
+				EC9ABA8E2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_Fetch.entitlements */,
+				EC9ABA8F2C88CB00000F9C47 /* Preview Content */,
+			);
+			path = "FreeMealApp-ClaytonSulby-Fetch";
+			sourceTree = "<group>";
+		};
+		EC9ABA8F2C88CB00000F9C47 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA902C88CB00000F9C47 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC9ABA992C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABA9A2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift */,
+			);
+			path = "FreeMealApp-ClaytonSulby-FetchTests";
+			sourceTree = "<group>";
+		};
+		EC9ABAA32C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC9ABAA42C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift */,
+				EC9ABAA62C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift */,
+			);
+			path = "FreeMealApp-ClaytonSulby-FetchUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC9ABA822C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9ABAAA2C88CB00000F9C47 /* Build configuration list for PBXNativeTarget "FreeMealApp-ClaytonSulby-Fetch" */;
+			buildPhases = (
+				EC9ABA7F2C88CAFE000F9C47 /* Sources */,
+				EC9ABA802C88CAFE000F9C47 /* Frameworks */,
+				EC9ABA812C88CAFE000F9C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FreeMealApp-ClaytonSulby-Fetch";
+			productName = "FreeMealApp-ClaytonSulby-Fetch";
+			productReference = EC9ABA832C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC9ABA952C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9ABAAD2C88CB00000F9C47 /* Build configuration list for PBXNativeTarget "FreeMealApp-ClaytonSulby-FetchTests" */;
+			buildPhases = (
+				EC9ABA922C88CB00000F9C47 /* Sources */,
+				EC9ABA932C88CB00000F9C47 /* Frameworks */,
+				EC9ABA942C88CB00000F9C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC9ABA982C88CB00000F9C47 /* PBXTargetDependency */,
+			);
+			name = "FreeMealApp-ClaytonSulby-FetchTests";
+			productName = "FreeMealApp-ClaytonSulby-FetchTests";
+			productReference = EC9ABA962C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC9ABA9F2C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC9ABAB02C88CB00000F9C47 /* Build configuration list for PBXNativeTarget "FreeMealApp-ClaytonSulby-FetchUITests" */;
+			buildPhases = (
+				EC9ABA9C2C88CB00000F9C47 /* Sources */,
+				EC9ABA9D2C88CB00000F9C47 /* Frameworks */,
+				EC9ABA9E2C88CB00000F9C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC9ABAA22C88CB00000F9C47 /* PBXTargetDependency */,
+			);
+			name = "FreeMealApp-ClaytonSulby-FetchUITests";
+			productName = "FreeMealApp-ClaytonSulby-FetchUITests";
+			productReference = EC9ABAA02C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC9ABA7B2C88CAFE000F9C47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					EC9ABA822C88CAFE000F9C47 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					EC9ABA952C88CB00000F9C47 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = EC9ABA822C88CAFE000F9C47;
+					};
+					EC9ABA9F2C88CB00000F9C47 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = EC9ABA822C88CAFE000F9C47;
+					};
+				};
+			};
+			buildConfigurationList = EC9ABA7E2C88CAFE000F9C47 /* Build configuration list for PBXProject "FreeMealApp-ClaytonSulby-Fetch" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC9ABA7A2C88CAFE000F9C47;
+			productRefGroup = EC9ABA842C88CAFE000F9C47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC9ABA822C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch */,
+				EC9ABA952C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchTests */,
+				EC9ABA9F2C88CB00000F9C47 /* FreeMealApp-ClaytonSulby-FetchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC9ABA812C88CAFE000F9C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9ABA912C88CB00000F9C47 /* Preview Assets.xcassets in Resources */,
+				EC9ABA8D2C88CB00000F9C47 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9ABA942C88CB00000F9C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9ABA9E2C88CB00000F9C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC9ABA7F2C88CAFE000F9C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9ABA892C88CAFE000F9C47 /* ContentView.swift in Sources */,
+				EC9ABA8B2C88CAFE000F9C47 /* Item.swift in Sources */,
+				EC9ABA872C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9ABA922C88CB00000F9C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9ABA9B2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC9ABA9C2C88CB00000F9C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC9ABAA52C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITests.swift in Sources */,
+				EC9ABAA72C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC9ABA982C88CB00000F9C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC9ABA822C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch */;
+			targetProxy = EC9ABA972C88CB00000F9C47 /* PBXContainerItemProxy */;
+		};
+		EC9ABAA22C88CB00000F9C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC9ABA822C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch */;
+			targetProxy = EC9ABAA12C88CB00000F9C47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EC9ABAA82C88CB00000F9C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC9ABAA92C88CB00000F9C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EC9ABAAB2C88CB00000F9C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FreeMealApp-ClaytonSulby-Fetch/FreeMealApp_ClaytonSulby_Fetch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FreeMealApp-ClaytonSulby-Fetch/Preview Content\"";
+				DEVELOPMENT_TEAM = KUV9DN7K8X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.claytonsulby.FreeMealApp-ClaytonSulby-Fetch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC9ABAAC2C88CB00000F9C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "FreeMealApp-ClaytonSulby-Fetch/FreeMealApp_ClaytonSulby_Fetch.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FreeMealApp-ClaytonSulby-Fetch/Preview Content\"";
+				DEVELOPMENT_TEAM = KUV9DN7K8X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.claytonsulby.FreeMealApp-ClaytonSulby-Fetch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC9ABAAE2C88CB00000F9C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KUV9DN7K8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.claytonsulby.FreeMealApp-ClaytonSulby-FetchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeMealApp-ClaytonSulby-Fetch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FreeMealApp-ClaytonSulby-Fetch";
+			};
+			name = Debug;
+		};
+		EC9ABAAF2C88CB00000F9C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KUV9DN7K8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.claytonsulby.FreeMealApp-ClaytonSulby-FetchTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeMealApp-ClaytonSulby-Fetch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FreeMealApp-ClaytonSulby-Fetch";
+			};
+			name = Release;
+		};
+		EC9ABAB12C88CB00000F9C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KUV9DN7K8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.claytonsulby.FreeMealApp-ClaytonSulby-FetchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FreeMealApp-ClaytonSulby-Fetch";
+			};
+			name = Debug;
+		};
+		EC9ABAB22C88CB00000F9C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KUV9DN7K8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.claytonsulby.FreeMealApp-ClaytonSulby-FetchUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FreeMealApp-ClaytonSulby-Fetch";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC9ABA7E2C88CAFE000F9C47 /* Build configuration list for PBXProject "FreeMealApp-ClaytonSulby-Fetch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9ABAA82C88CB00000F9C47 /* Debug */,
+				EC9ABAA92C88CB00000F9C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9ABAAA2C88CB00000F9C47 /* Build configuration list for PBXNativeTarget "FreeMealApp-ClaytonSulby-Fetch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9ABAAB2C88CB00000F9C47 /* Debug */,
+				EC9ABAAC2C88CB00000F9C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9ABAAD2C88CB00000F9C47 /* Build configuration list for PBXNativeTarget "FreeMealApp-ClaytonSulby-FetchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9ABAAE2C88CB00000F9C47 /* Debug */,
+				EC9ABAAF2C88CB00000F9C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC9ABAB02C88CB00000F9C47 /* Build configuration list for PBXNativeTarget "FreeMealApp-ClaytonSulby-FetchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC9ABAB12C88CB00000F9C47 /* Debug */,
+				EC9ABAB22C88CB00000F9C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC9ABA7B2C88CAFE000F9C47 /* Project object */;
+}
