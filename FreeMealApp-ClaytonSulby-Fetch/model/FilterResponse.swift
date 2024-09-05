@@ -20,11 +20,20 @@ public struct FilterResponse: Codable, Equatable {
 
 // MARK: - Meal
 public struct FilterItem: Codable, Equatable {
-    let strMeal, strMealThumb, idMeal: String
+    public let strMeal, strMealThumb, id: String
     
     public static func == (lhs: FilterItem, rhs: FilterItem) -> Bool {
         return lhs.strMeal == rhs.strMeal &&
         lhs.strMealThumb == rhs.strMealThumb &&
-        lhs.idMeal == rhs.idMeal
+        lhs.id == rhs.id
     }
+    
+    enum CodingKeys: String, CodingKey {
+        case strMeal
+        case strMealThumb
+        case id = "idMeal"
+    }
+}
+
+extension FilterItem: Identifiable {
 }

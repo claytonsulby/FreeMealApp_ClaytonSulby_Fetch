@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Element: View {
+struct MealListElement: View {
     
     let url:URL?
     let index:String
@@ -123,7 +123,7 @@ fileprivate extension AsyncImage {
    
 
 #Preview {
-    Element(url: URL(string: "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg"),
+    MealListElement(url: URL(string: "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg"),
             index: "52792", subheadline: "Dessert", title: "Bread and Butter Pudding")
     .previewLayout(.sizeThatFits)
 }
