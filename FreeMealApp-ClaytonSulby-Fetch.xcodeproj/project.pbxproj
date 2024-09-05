@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EC9ABA872C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */; };
 		EC9ABA892C88CAFE000F9C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA882C88CAFE000F9C47 /* ContentView.swift */; };
-		EC9ABA8B2C88CAFE000F9C47 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA8A2C88CAFE000F9C47 /* Item.swift */; };
 		EC9ABA8D2C88CB00000F9C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */; };
 		EC9ABA912C88CB00000F9C47 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9ABA902C88CB00000F9C47 /* Preview Assets.xcassets */; };
 		EC9ABA9B2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA9A2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_FetchTests.swift */; };
@@ -23,6 +22,7 @@
 		EC9ABAC22C88D60A000F9C47 /* LookupResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABAC12C88D60A000F9C47 /* LookupResponse.swift */; };
 		ECBB4AD82C8A189C0058CC15 /* MealListElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBB4AD72C8A189C0058CC15 /* MealListElement.swift */; };
 		ECBB4ADA2C8A1CF00058CC15 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBB4AD92C8A1CF00058CC15 /* MealList.swift */; };
+		ECBB4ADC2C8A26F80058CC15 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBB4ADB2C8A26F80058CC15 /* MealDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		EC9ABA832C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreeMealApp-ClaytonSulby-Fetch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchApp.swift; sourceTree = "<group>"; };
 		EC9ABA882C88CAFE000F9C47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		EC9ABA8A2C88CAFE000F9C47 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC9ABA8E2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_Fetch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreeMealApp_ClaytonSulby_Fetch.entitlements; sourceTree = "<group>"; };
 		EC9ABA902C88CB00000F9C47 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		EC9ABAC12C88D60A000F9C47 /* LookupResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupResponse.swift; sourceTree = "<group>"; };
 		ECBB4AD72C8A189C0058CC15 /* MealListElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListElement.swift; sourceTree = "<group>"; };
 		ECBB4AD92C8A1CF00058CC15 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
+		ECBB4ADB2C8A26F80058CC15 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,6 @@
 		EC9ABAB32C88D081000F9C47 /* model */ = {
 			isa = PBXGroup;
 			children = (
-				EC9ABA8A2C88CAFE000F9C47 /* Item.swift */,
 				EC9ABAB82C88D3A7000F9C47 /* FilterResponse.swift */,
 				EC9ABAC12C88D60A000F9C47 /* LookupResponse.swift */,
 			);
@@ -165,6 +164,7 @@
 				EC9ABA882C88CAFE000F9C47 /* ContentView.swift */,
 				ECBB4AD72C8A189C0058CC15 /* MealListElement.swift */,
 				ECBB4AD92C8A1CF00058CC15 /* MealList.swift */,
+				ECBB4ADB2C8A26F80058CC15 /* MealDetail.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -325,8 +325,8 @@
 				EC9ABABF2C88D4F8000F9C47 /* DecodeError.swift in Sources */,
 				ECBB4AD82C8A189C0058CC15 /* MealListElement.swift in Sources */,
 				EC9ABA892C88CAFE000F9C47 /* ContentView.swift in Sources */,
-				EC9ABA8B2C88CAFE000F9C47 /* Item.swift in Sources */,
 				EC9ABABB2C88D4A0000F9C47 /* Agent.swift in Sources */,
+				ECBB4ADC2C8A26F80058CC15 /* MealDetail.swift in Sources */,
 				EC9ABAB62C88D0AF000F9C47 /* FreeMealAPI.swift in Sources */,
 				EC9ABA872C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift in Sources */,
 			);

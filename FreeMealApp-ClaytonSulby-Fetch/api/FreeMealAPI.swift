@@ -54,10 +54,10 @@ public extension FreeMealAPI {
     /// - [Example](https://themealdb.com/api/json/v1/1/lookup.php?i=52988)
     ///
     /// - Returns: list of LookupItem
-    static func getLookup(id:Int) async throws -> LookupResponse {
+    static func getLookup(id:String) async throws -> LookupResponse {
         
         var components = baseAPIComponents(.lookup)
-        components.queryItems?.append(contentsOf: [URLQueryItem(name: "i", value: String(id))])
+        components.queryItems?.append(contentsOf: [URLQueryItem(name: "i", value: id)])
         let request = URLRequest(url: components.url!)
         
         return try await agent.run(request)

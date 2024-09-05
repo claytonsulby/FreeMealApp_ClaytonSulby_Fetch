@@ -15,7 +15,13 @@ struct MealList: View {
     var body: some View {
         List {
             ForEach(meals.sorted(by: { $0.strMeal < $1.strMeal })) { meal in
-                MealListElement(url: getURL(meal), index: meal.id, subheadline: filter, title: meal.strMeal)
+                NavigationLink {
+                    MealDetail(id: meal.id)
+                } label: {
+                    MealListElement(url: getURL(meal), index: meal.id, subheadline: filter, title: meal.strMeal)
+                }
+
+
             }
         }
         .listStyle(.plain)

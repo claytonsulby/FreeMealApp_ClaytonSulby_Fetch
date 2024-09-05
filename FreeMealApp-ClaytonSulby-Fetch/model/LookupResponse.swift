@@ -24,19 +24,19 @@ public struct LookupItem: Codable, Equatable {
     public let strDrinkAlternate: JSONNull?
     public let strCategory, strArea, strInstructions: String
     public let strMealThumb: String
-    public let strTags: String
+    public let strTags: String?
     public let strYoutube: String
-    public let strIngredient1, strIngredient2, strIngredient3, strIngredient4: String
-    public let strIngredient5, strIngredient6, strIngredient7, strIngredient8: String
-    public let strIngredient9, strIngredient10, strIngredient11, strIngredient12: String
-    public let strIngredient13, strIngredient14, strIngredient15, strIngredient16: String
-    public let strIngredient17, strIngredient18, strIngredient19, strIngredient20: String
-    public let strMeasure1, strMeasure2, strMeasure3, strMeasure4: String
-    public let strMeasure5, strMeasure6, strMeasure7, strMeasure8: String
-    public let strMeasure9, strMeasure10, strMeasure11, strMeasure12: String
-    public let strMeasure13, strMeasure14, strMeasure15, strMeasure16: String
-    public let strMeasure17, strMeasure18, strMeasure19, strMeasure20: String
-    public let strSource: String
+    public let strIngredient1, strIngredient2, strIngredient3, strIngredient4: String?
+    public let strIngredient5, strIngredient6, strIngredient7, strIngredient8: String?
+    public let strIngredient9, strIngredient10, strIngredient11, strIngredient12: String?
+    public let strIngredient13, strIngredient14, strIngredient15, strIngredient16: String?
+    public let strIngredient17, strIngredient18, strIngredient19, strIngredient20: String?
+    public let strMeasure1, strMeasure2, strMeasure3, strMeasure4: String?
+    public let strMeasure5, strMeasure6, strMeasure7, strMeasure8: String?
+    public let strMeasure9, strMeasure10, strMeasure11, strMeasure12: String?
+    public let strMeasure13, strMeasure14, strMeasure15, strMeasure16: String?
+    public let strMeasure17, strMeasure18, strMeasure19, strMeasure20: String?
+    public let strSource: String?
     public let strImageSource, strCreativeCommonsConfirmed, dateModified: JSONNull?
 
     public static func == (lhs: LookupItem, rhs: LookupItem) -> Bool {

@@ -24,7 +24,7 @@ final class FreeMealApp_ClaytonSulby_FetchTests: XCTestCase {
     }
     
     func testGetLookup() async throws {
-        let result = try await FreeMealAPI.getLookup(id: 52929)
+        let result = try await FreeMealAPI.getLookup(id: "52929")
         XCTAssertNotEqual(result, LookupResponse())
     }
 
