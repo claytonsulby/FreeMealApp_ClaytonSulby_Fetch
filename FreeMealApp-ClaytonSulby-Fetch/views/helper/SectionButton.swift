@@ -25,3 +25,7 @@ public struct SectionButton : View {
     }
     
 }
+
+#Preview {
+    SectionButton(title: "Show More", symbol: "chevron.right")
+}

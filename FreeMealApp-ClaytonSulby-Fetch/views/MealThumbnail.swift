@@ -8,11 +8,39 @@
 import SwiftUI
 
 struct MealThumbnail: View {
+    let url:URL?
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AsyncImage(url: url) { image in
+            image
+                .image()
+        } placeholder: {
+            ProgressView()
+        }
+    }
+}
+
+fileprivate extension Image {
+    
+    func image() -> some View {
+        let screenSize: CGRect = UIScreen.main.bounds
+        
+        return self
+            .resizable()
+            .antialiased(false)
+            .interpolation(.none)
+            .aspectRatio(contentMode: .fit)
+            .overlay(
+                RoundedRectangle(cornerRadius: 30)
+                    .stroke(style: StrokeStyle(lineWidth: 0.1))
+                    .foregroundColor(.secondary)
+            )
+            .cornerRadius(30)
+            .frame(minWidth: 0, maxWidth: screenSize.width / 2, minHeight: 0, maxHeight: .infinity, alignment: .center)
     }
 }
 
 #Preview {
-    MealThumbnail()
+    MealThumbnail(url: URL(string: "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg"))
 }
+

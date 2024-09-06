@@ -17,7 +17,7 @@ struct MealDetail: View {
     
     var ingredients:[String] {
         guard let meal = meal else {return [] }
-        var ingredients:[String?] = [meal.strIngredient1,
+        let ingredients:[String?] = [meal.strIngredient1,
                                      meal.strIngredient2,
                                      meal.strIngredient3,
                                      meal.strIngredient4,
@@ -37,13 +37,15 @@ struct MealDetail: View {
                                      meal.strIngredient18,
                                      meal.strIngredient19,
                                      meal.strIngredient20]
-        ingredients = ingredients.filter({ $0 != nil })
-        return ingredients.compactMap({ $0 })
+        return ingredients
+            .filter { $0 != nil && !$0!.isEmpty }
+            .compactMap { $0 }
+            .map { $0.capitalized(with: .autoupdatingCurrent) }
     }
     
     var measures:[String] {
         guard let meal = meal else {return [] }
-        var measures:[String?] = [meal.strMeasure1,
+        let measures:[String?] = [meal.strMeasure1,
                                   meal.strMeasure2,
                                   meal.strMeasure3,
                                   meal.strMeasure4,
@@ -63,47 +65,39 @@ struct MealDetail: View {
                                   meal.strMeasure18,
                                   meal.strMeasure19,
                                   meal.strMeasure20]
-        measures = measures.filter({ $0 != nil })
-        return measures.compactMap({ $0 })
+        return measures
+            .filter { $0 != nil && !$0!.isEmpty }
+            .compactMap { $0 }
+            .map { $0.capitalized(with: .autoupdatingCurrent) }
+    }
+    
+    var combined:[(String, String)] {
+        Array(zip(ingredients, measures))
     }
     
     var body: some View {
         ScrollView {
             VStack{
-                AsyncImage(url: URL(string: meal?.strMealThumb ?? "")) { image in
-                    image
-                        .image()
-                } placeholder: {
-                    ProgressView()
+                MealThumbnail(url: URL(string: meal?.strMealThumb ?? ""))
+
+                HStack{
+                    Text(meal?.strMeal ?? "Meal")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }.padding(.horizontal, 20.5)
+                
+                ExpandableModalSection("Instructions") { isExpanded in
+                    Text((meal?.strInstructions ?? "") + "\(isExpanded.wrappedValue ? "" : "...")")
+                        .lineLimit(isExpanded.wrappedValue ? nil : 3)
                 }
                 
-                Section {
-                    Text(meal?.strInstructions ?? "")
-                } header: {
-                    Text("Instructions")
-                        .font(.title2)
+                SimpleSection("Ingredients") {
+                    ingredientsGrid()
                 }
-                
-                Section {
-                    HStack{
-                        VStack{
-                            ForEach(ingredients, id:\.self) { ingredient in
-                                Text(ingredient)
-                            }
-                        }
-                        VStack{
-                            ForEach(measures, id:\.self) { measure in
-                                Text(measure)
-                            }
-                        }
-                    }
-                } header: {
-                    Text("Ingredients")
-                        .font(.title2)
-                }
-                
             }
-        }.navigationTitle(meal?.strMeal ?? "Meal")
+        }.navigationTitle("")
+        .navigationBarTitleDisplayMode(.inline)
             .task {
                 do {
                     mealDetails = try await FreeMealAPI.getLookup(id: id)
@@ -112,24 +106,19 @@ struct MealDetail: View {
                 }
             }
     }
-}
-
-fileprivate extension Image {
-    func image() -> some View {
-        return self
-            .resizable()
-            .antialiased(false)
-            .interpolation(.none)
-            .aspectRatio(contentMode: .fit)
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(style: StrokeStyle(lineWidth: 0.1))
-                    .foregroundColor(.secondary)
-            )
-            .cornerRadius(5)
-            .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100, alignment: .center)
+    
+    private func ingredientsGrid() -> some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading), GridItem(.adaptive(minimum: 150), alignment: .leading)], content: {
+            ForEach(combined, id:\.0) { ingredient, measure in
+                Text(ingredient)
+                Text(measure)
+            }
+            .foregroundColor(.primary)
+        })
     }
 }
+
+
 
 #Preview {
     MealDetail(id: "52792")

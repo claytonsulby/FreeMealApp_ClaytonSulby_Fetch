@@ -25,6 +25,7 @@ struct MealList: View {
             }
         }
         .listStyle(.plain)
+        .navigationTitle(filter)
     }
     
     private func getURL(_ meal: FilterItem) -> URL? {

@@ -19,7 +19,7 @@ public struct ExpandableModalSection<Content:View> : View {
         self.shouldShowMore = shouldShowMore
         self.content = content
     }
-
+    
     public var body : some View {
         
         VStack(alignment: .leading, spacing: 40.0){
@@ -48,14 +48,14 @@ public struct ExpandableModalSection<Content:View> : View {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(alignment: .center, spacing: 20) {
-
-                        content(.constant(true))
-                            .foregroundColor(.secondary)
-                            .padding(.horizontal, 20.5)
+                            
+                            content(.constant(true))
+                                .foregroundColor(.secondary)
+                                .padding(.horizontal, 20.5)
                         }
                     }.navigationTitle(title)
-                    #if os(iOS)
-                    .navigationBarTitleDisplayMode(.inline)
+#if os(iOS)
+                        .navigationBarTitleDisplayMode(.inline)
                         .navigationBarItems(
                             trailing:
                                 Image(systemName: "xmark")
@@ -65,17 +65,16 @@ public struct ExpandableModalSection<Content:View> : View {
                                     showMore.toggle()
                                 }
                         )
-                    #endif
+#endif
                 }
             }
     }
     
 }
 
-struct ExpandableModalSection_Previews: PreviewProvider {
-    static var previews: some View {
-        ExpandableModalSection("ExpandableModalSection") { isShowingMore in
-            Text("Content")
-        }
+#Preview {
+    ExpandableModalSection("ExpandableModalSection") { isShowingMore in
+        Text("Content")
     }
 }
+
