@@ -9,19 +9,21 @@ import SwiftUI
 
 struct MealList: View {
     
-    @ObservedObject var viewModel:MealListViewModel
+    @StateObject var viewModel:MealListViewModel
     
     init(filter:String, meals:[FilterItem]) {
-        self._viewModel = ObservedObject(wrappedValue: MealListViewModel(filter: filter, meals: meals))
+        self._viewModel = StateObject(wrappedValue: MealListViewModel(filter: filter, meals: meals))
     }
     
     var body: some View {
         List(viewModel.getSortedList()) { meal in
-            NavigationLink(value: meal.id) {
+            NavigationLink(value: meal) {
                 MealListElement(url: viewModel.getThumbnailURL(meal), index: meal.id, subheadline: viewModel.filter, title: meal.strMeal)
             }
         }
-        .navigationDestination(for: String.self, destination:{ MealDetail(id: $0) })
+        .navigationDestination(for: FilterItem.self) {
+            MealDetail(id: $0.id)
+        }
         .toolbar(content: {
             SortingSelection(isAscending: $viewModel.isAscending, 
                              selection: $viewModel.selectedSortingScheme,

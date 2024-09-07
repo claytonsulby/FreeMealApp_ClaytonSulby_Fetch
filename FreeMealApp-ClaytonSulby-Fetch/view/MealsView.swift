@@ -21,6 +21,7 @@ struct MealsView: View {
                 await viewModel.fetchMeals()
             }
             .task {
+                guard (viewModel.meals == nil) else { return }
                 await viewModel.fetchMeals()
             }
             .animation(.easeInOut, value: viewModel.isLoading)

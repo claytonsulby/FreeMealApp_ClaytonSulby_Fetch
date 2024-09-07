@@ -15,15 +15,14 @@ public struct CategoryResponse: Codable {
 }
 
 // MARK: - Category
-public struct CategoryItem: Codable {
-    public let idCategory, strCategory: String
-    public let strCategoryThumb: String
-    public let strCategoryDescription: String
+public struct CategoryItem: Codable, Hashable {
+    public let strCategory: String
 
-    public init(idCategory: String, strCategory: String, strCategoryThumb: String, strCategoryDescription: String) {
-        self.idCategory = idCategory
+    public init(id: String, strCategory: String, strCategoryThumb: String, strCategoryDescription: String) {
         self.strCategory = strCategory
-        self.strCategoryThumb = strCategoryThumb
-        self.strCategoryDescription = strCategoryDescription
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case strCategory
     }
 }

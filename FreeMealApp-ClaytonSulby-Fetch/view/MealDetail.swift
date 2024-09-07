@@ -23,6 +23,7 @@ struct MealDetail: View {
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
             .task {
+                guard (viewModel.meal == nil) else { return }
                 await viewModel.fetchMeal()
             }
             .animation(.easeInOut, value: viewModel.isLoading)
