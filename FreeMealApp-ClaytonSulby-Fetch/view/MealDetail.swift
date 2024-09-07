@@ -21,12 +21,11 @@ struct MealDetail: View {
                 await viewModel.fetchMeal()
             })
             .navigationTitle("")
-        #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
-        #endif
             .task {
                 await viewModel.fetchMeal()
             }
+            .animation(.easeInOut, value: viewModel.isLoading)
     }
 
     private func content() -> some View {

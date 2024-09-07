@@ -13,6 +13,7 @@ public class MealDetailViewModel : ObservableObject {
     let id:String
     @Published var meal:LookupItem?
     @Published var error:Error?
+    @Published var isLoading:Bool = false
     
     init(id:String) {
         self.id = id
@@ -20,11 +21,13 @@ public class MealDetailViewModel : ObservableObject {
     }
     
     public func fetchMeal() async {
+        isLoading = true
         do {
             self.meal = try await FreeMealAPI.getLookup(id: id).meals.first
         } catch {
             self.error = error
         }
+        isLoading = false
     }
     
     public func getIngredients() -> [Ingredient] {

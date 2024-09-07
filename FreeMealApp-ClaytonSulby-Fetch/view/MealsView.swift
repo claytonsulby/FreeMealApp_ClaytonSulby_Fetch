@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MealsView: View {
     
-    @ObservedObject var viewModel:MealListViewModel = MealListViewModel()
+    @ObservedObject var viewModel:MealsViewModel = MealsViewModel()
     
     var body: some View {
         NavigationSplitView {
@@ -23,9 +23,10 @@ struct ContentView: View {
         .task {
             await viewModel.fetchMeals()
         }
+        .animation(.easeInOut, value: viewModel.isLoading)
     }
 }
 
 #Preview {
-    ContentView()
+    MealsView()
 }

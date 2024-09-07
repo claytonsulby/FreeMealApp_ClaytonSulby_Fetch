@@ -34,9 +34,7 @@ fileprivate extension Image {
                     .foregroundColor(.secondary)
             )
             .cornerRadius(30)
-        #if os(iOS)
             .frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width / 2, minHeight: 0, maxHeight: .infinity, alignment: .center)
-        #endif
     }
 }
 

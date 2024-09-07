@@ -53,7 +53,6 @@ public struct ExpandableModalSection<Content:View> : View {
                                 .padding(.horizontal, 20.5)
                         }
                     }.navigationTitle(title)
-#if os(iOS)
                         .navigationBarTitleDisplayMode(.inline)
                         .navigationBarItems(
                             trailing:
@@ -64,7 +63,6 @@ public struct ExpandableModalSection<Content:View> : View {
                                     showMore.toggle()
                                 }
                         )
-#endif
                 }
             }
     }

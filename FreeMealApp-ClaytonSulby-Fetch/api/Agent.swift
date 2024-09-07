@@ -42,36 +42,26 @@ extension Agent {
         case 200...299:
             break
         case 400:
-            // Bad Request
             throw NetworkError.badRequest
         case 401:
-            // Unauthorized
             throw NetworkError.unauthorized
         case 403:
-            // Forbidden
             throw NetworkError.forbidden
         case 404:
-            // Not Found
             throw NetworkError.notFound
         case 405:
-            // Method Not Allowed
             throw NetworkError.methodNotAllowed
         case 406:
-            // Not Acceptable
             throw NetworkError.notAcceptable
         case 408:
-            // Request Timeout
             throw NetworkError.requestTimeout
         case 410:
             throw NetworkError.gone
         case 422:
-            // Unprocessable Entity
             throw NetworkError.unprocessableEntity
         case 429:
-            // Too Many Requests
             throw NetworkError.tooManyRequests
         case 500...599:
-            // Server error
             throw NetworkError.serverError(httpResponse.statusCode)
         default:
             // Other status codes
