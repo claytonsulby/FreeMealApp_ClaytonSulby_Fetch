@@ -5,7 +5,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - LookupResponse
 public struct LookupResponse: Codable, Equatable {
     public let meals: [LookupItem]
 
@@ -18,14 +18,11 @@ public struct LookupResponse: Codable, Equatable {
     }
 }
 
-// MARK: - Meal
-public struct LookupItem: Codable, Equatable {
-    public let idMeal, strMeal: String
-    public let strDrinkAlternate: JSONNull?
-    public let strCategory, strArea, strInstructions: String
+// MARK: - LookupItem
+public struct LookupItem: Codable, Equatable, Identifiable {
+    public let id, strMeal: String
+    public let strInstructions: String
     public let strMealThumb: String
-    public let strTags: String?
-    public let strYoutube: String
     public let strIngredient1, strIngredient2, strIngredient3, strIngredient4: String?
     public let strIngredient5, strIngredient6, strIngredient7, strIngredient8: String?
     public let strIngredient9, strIngredient10, strIngredient11, strIngredient12: String?
@@ -36,19 +33,12 @@ public struct LookupItem: Codable, Equatable {
     public let strMeasure9, strMeasure10, strMeasure11, strMeasure12: String?
     public let strMeasure13, strMeasure14, strMeasure15, strMeasure16: String?
     public let strMeasure17, strMeasure18, strMeasure19, strMeasure20: String?
-    public let strSource: String?
-    public let strImageSource, strCreativeCommonsConfirmed, dateModified: JSONNull?
 
     public static func == (lhs: LookupItem, rhs: LookupItem) -> Bool {
-        return lhs.idMeal == rhs.idMeal &&
+        return lhs.id == rhs.id &&
         lhs.strMeal == rhs.strMeal &&
-        lhs.strDrinkAlternate == rhs.strDrinkAlternate &&
-        lhs.strCategory == rhs.strCategory &&
-        lhs.strArea == rhs.strArea &&
         lhs.strInstructions == rhs.strInstructions &&
         lhs.strMealThumb == rhs.strMealThumb &&
-        lhs.strTags == rhs.strTags &&
-        lhs.strYoutube == rhs.strYoutube &&
         lhs.strIngredient1 == rhs.strIngredient1 &&
         lhs.strIngredient2 == rhs.strIngredient2 &&
         lhs.strIngredient3 == rhs.strIngredient3 &&
@@ -88,37 +78,53 @@ public struct LookupItem: Codable, Equatable {
         lhs.strMeasure17 == rhs.strMeasure17 &&
         lhs.strMeasure18 == rhs.strMeasure18 &&
         lhs.strMeasure19 == rhs.strMeasure19 &&
-        lhs.strMeasure20 == rhs.strMeasure20 &&
-        lhs.strSource == rhs.strSource &&
-        lhs.strImageSource == rhs.strImageSource &&
-        lhs.strCreativeCommonsConfirmed == rhs.strCreativeCommonsConfirmed &&
-        lhs.dateModified == rhs.dateModified
+        lhs.strMeasure20 == rhs.strMeasure20
     }
-}
-
-// MARK: - Encode/decode helpers
-
-public class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-            return true
-    }
-
-    public var hashValue: Int {
-            return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-            let container = try decoder.singleValueContainer()
-            if !container.decodeNil() {
-                    throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-            }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-            var container = encoder.singleValueContainer()
-            try container.encodeNil()
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "idMeal"
+        case strMeal
+        case strInstructions
+        case strMealThumb
+        case strIngredient1
+        case strIngredient2
+        case strIngredient3
+        case strIngredient4
+        case strIngredient5
+        case strIngredient6
+        case strIngredient7
+        case strIngredient8
+        case strIngredient9
+        case strIngredient10
+        case strIngredient11
+        case strIngredient12
+        case strIngredient13
+        case strIngredient14
+        case strIngredient15
+        case strIngredient16
+        case strIngredient17
+        case strIngredient18
+        case strIngredient19
+        case strIngredient20
+        case strMeasure1
+        case strMeasure2
+        case strMeasure3
+        case strMeasure4
+        case strMeasure5
+        case strMeasure6
+        case strMeasure7
+        case strMeasure8
+        case strMeasure9
+        case strMeasure10
+        case strMeasure11
+        case strMeasure12
+        case strMeasure13
+        case strMeasure14
+        case strMeasure15
+        case strMeasure16
+        case strMeasure17
+        case strMeasure18
+        case strMeasure19
+        case strMeasure20
     }
 }

@@ -5,7 +5,7 @@
 
 import Foundation
 
-// MARK: - Meals
+// MARK: - FilterResponse
 public struct FilterResponse: Codable, Equatable {
     let meals: [FilterItem]
     
@@ -18,7 +18,7 @@ public struct FilterResponse: Codable, Equatable {
     }
 }
 
-// MARK: - Meal
+// MARK: - FilterItem
 public struct FilterItem: Codable, Equatable {
     public let strMeal, strMealThumb, id: String
     

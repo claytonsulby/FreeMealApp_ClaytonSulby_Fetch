@@ -137,13 +137,13 @@
 			isa = PBXGroup;
 			children = (
 				EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */,
-				ECAF0F2A2C8BE3ED0028CB28 /* viewmodel */,
-				EC9ABAB42C88D090000F9C47 /* views */,
 				EC9ABAB32C88D081000F9C47 /* model */,
+				ECAF0F2A2C8BE3ED0028CB28 /* viewmodel */,
+				EC9ABAB42C88D090000F9C47 /* view */,
+				EC9ABAB72C88D0B4000F9C47 /* api */,
 				EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */,
 				EC9ABA8E2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_Fetch.entitlements */,
 				EC9ABA8F2C88CB00000F9C47 /* Preview Content */,
-				EC9ABAB72C88D0B4000F9C47 /* api */,
 			);
 			path = "FreeMealApp-ClaytonSulby-Fetch";
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		EC9ABAB42C88D090000F9C47 /* views */ = {
+		EC9ABAB42C88D090000F9C47 /* view */ = {
 			isa = PBXGroup;
 			children = (
 				EC9ABA882C88CAFE000F9C47 /* ContentView.swift */,
@@ -192,7 +192,7 @@
 				ECAF0F282C8B7FFD0028CB28 /* MealThumbnail.swift */,
 				ECAF0F252C8B71810028CB28 /* helper */,
 			);
-			path = views;
+			path = view;
 			sourceTree = "<group>";
 		};
 		EC9ABAB72C88D0B4000F9C47 /* api */ = {
