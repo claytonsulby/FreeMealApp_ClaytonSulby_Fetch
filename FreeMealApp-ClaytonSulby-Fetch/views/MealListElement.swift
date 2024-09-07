@@ -111,12 +111,6 @@ fileprivate extension Image {
 fileprivate extension AsyncImage {
     func asyncImage() -> some View {
         return self
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(style: StrokeStyle(lineWidth: 0.1))
-                    .foregroundColor(.secondary)
-            )
-            .cornerRadius(5)
             .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100, alignment: .center)
     }
 }

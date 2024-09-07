@@ -6,24 +6,19 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
-    private let filter:String = "Dessert"
-    @State private var filterResponse: FilterResponse?
+    
+    @ObservedObject var viewModel:MealListViewModel = MealListViewModel()
 
     var body: some View {
         NavigationSplitView {
-            MealList(filter: filter, meals: filterResponse?.meals ?? [])
+            MealList(filter: viewModel.filter, meals: viewModel.meals)
         } detail: {
             Text("Select a meal")
         }
         .task {
-            do {
-                filterResponse = try await FreeMealAPI.getFilter(filter: filter)
-            } catch {
-                print(error)
-            }
+            await viewModel.fetchMeals()
         }
     }
 }

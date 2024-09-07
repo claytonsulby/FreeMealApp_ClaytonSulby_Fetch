@@ -48,7 +48,6 @@ public struct ExpandableModalSection<Content:View> : View {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(alignment: .center, spacing: 20) {
-                            
                             content(.constant(true))
                                 .foregroundColor(.secondary)
                                 .padding(.horizontal, 20.5)
