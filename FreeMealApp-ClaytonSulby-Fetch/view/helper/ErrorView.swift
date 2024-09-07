@@ -23,14 +23,12 @@ struct ErrorView: View {
     }
     
     var body: some View {
-        VStack{
-            Text("An Error Has Occurred")
-                .fontWeight(.semibold)
+        SimpleSection("An Error Has Occurred") {
             Text(error.localizedDescription)
                 .font(.monospaced(.caption)())
+                .foregroundStyle(.secondary)
             retryButton()
         }
-        .padding(.horizontal, 20.5)
     }
 
     private func retryButton() -> some View {
@@ -42,11 +40,10 @@ struct ErrorView: View {
             }.padding()
         }
         .disabled(retry == nil)
-        .foregroundColor(.primary)
+        .foregroundStyle(.primary)
         .background(Color.secondary
             .cornerRadius(10)
             .opacity(0.5))
-        .padding(.top)
     }
 }
 

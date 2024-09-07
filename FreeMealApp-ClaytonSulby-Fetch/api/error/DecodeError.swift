@@ -7,7 +7,6 @@
 
 import Foundation
 
-// Define a custom error type for decoding errors
 enum DecodeError: Error {
     case dataCorrupted(context: DecodingError.Context, rawData: Data?)
     case keyNotFound(key: CodingKey, context: DecodingError.Context, rawData: Data?)

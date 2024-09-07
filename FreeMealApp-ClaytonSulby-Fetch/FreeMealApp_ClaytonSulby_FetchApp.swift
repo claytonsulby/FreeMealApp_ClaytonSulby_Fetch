@@ -12,7 +12,7 @@ import SwiftData
 struct FreeMealApp_ClaytonSulby_FetchApp: App {
     var body: some Scene {
         WindowGroup {
-            MealsView()
+            MainView()
         }
     }
 }

@@ -15,11 +15,13 @@ public class MealsViewModel : ObservableObject {
     @Published var error:Error?
     @Published var isLoading:Bool = false
     
-    init() {
-        self.filter = "Dessert"
+    init(filter:String) {
+        self.filter = filter
     }
     
     public func fetchMeals() async {
+        meals = nil
+        error = nil
         isLoading = true
         do {
             self.meals = try await FreeMealAPI.getFilter(filter: filter).meals

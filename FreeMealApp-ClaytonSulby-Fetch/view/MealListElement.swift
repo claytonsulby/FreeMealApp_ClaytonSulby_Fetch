@@ -112,6 +112,7 @@ fileprivate extension AsyncImage {
     func asyncImage() -> some View {
         return self
             .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100, alignment: .center)
+            .aspectRatio(1, contentMode: .fit)
     }
 }
    
@@ -119,5 +120,4 @@ fileprivate extension AsyncImage {
 #Preview {
     MealListElement(url: URL(string: "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg"),
             index: "52792", subheadline: "Dessert", title: "Bread and Butter Pudding")
-    .previewLayout(.sizeThatFits)
 }

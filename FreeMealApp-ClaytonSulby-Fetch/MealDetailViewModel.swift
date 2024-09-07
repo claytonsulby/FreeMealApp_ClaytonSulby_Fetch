@@ -21,6 +21,8 @@ public class MealDetailViewModel : ObservableObject {
     }
     
     public func fetchMeal() async {
+        meal = nil
+        error = nil
         isLoading = true
         do {
             self.meal = try await FreeMealAPI.getLookup(id: id).meals.first

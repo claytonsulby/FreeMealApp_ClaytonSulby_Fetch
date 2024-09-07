@@ -17,6 +17,8 @@ struct MealThumbnail: View {
         } placeholder: {
             ProgressView()
         }
+        .frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width / 2, minHeight: 0, maxHeight: UIScreen.main.bounds.width / 2, alignment: .center)
+        .aspectRatio(1, contentMode: .fit)
     }
 }
 

@@ -9,24 +9,24 @@ import SwiftUI
 
 struct MealsView: View {
     
-    @ObservedObject var viewModel:MealsViewModel = MealsViewModel()
+    @StateObject var viewModel:MealsViewModel
+    
+    init(filter:String) {
+        self._viewModel = StateObject(wrappedValue: MealsViewModel(filter: filter))
+    }
     
     var body: some View {
-        NavigationSplitView {
-            MealList(filter: viewModel.filter, meals: viewModel.meals ?? [])
-                .handleError(data: viewModel.meals, error: viewModel.error) {
-                    await viewModel.fetchMeals()
-                }
-        } detail: {
-            Text("Select a meal")
-        }
-        .task {
-            await viewModel.fetchMeals()
-        }
-        .animation(.easeInOut, value: viewModel.isLoading)
+        MealList(filter: viewModel.filter, meals: viewModel.meals ?? [])
+            .handleError(data: viewModel.meals, error: viewModel.error) {
+                await viewModel.fetchMeals()
+            }
+            .task {
+                await viewModel.fetchMeals()
+            }
+            .animation(.easeInOut, value: viewModel.isLoading)
     }
 }
 
 #Preview {
-    MealsView()
+    MealsView(filter: "Dessert")
 }

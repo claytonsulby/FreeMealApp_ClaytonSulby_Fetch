@@ -18,6 +18,7 @@ public extension FreeMealAPI {
     private enum APIPage : String {
         case lookup = "lookup"
         case filter = "filter"
+        case caregories = "categories"
     }
     
     private static func baseAPIComponents(_ page:APIPage) -> URLComponents {
@@ -32,11 +33,25 @@ public extension FreeMealAPI {
 
 public extension FreeMealAPI {
     
+    ///Gets all categories of to filter meals
+    ///
+    /// - [Example](https://themealdb.com/api/json/v1/1/categories.php)
+    ///
+    /// - Returns: list of CaregoryItem in CategoryResponse
+    static func getCategories() async throws -> CategoryResponse {
+        
+        var components = baseAPIComponents(.caregories)
+        let request = URLRequest(url: components.url!)
+        
+        return try await agent.run(request)
+            .value
+    }
+    
     ///Gets all items of specificed filter
     ///
     /// - [Example](https://themealdb.com/api/json/v1/1/filter.php?c=Dessert)
     ///
-    /// - Returns: list of FilterItem
+    /// - Returns: list of FilterItem in FilterResponse
     static func getFilter(filter:String) async throws -> FilterResponse {
         
         var components = baseAPIComponents(.filter)
@@ -51,7 +66,7 @@ public extension FreeMealAPI {
     ///
     /// - [Example](https://themealdb.com/api/json/v1/1/lookup.php?i=52988)
     ///
-    /// - Returns: list of LookupItem
+    /// - Returns: list of LookupItem in LookupResponse
     static func getLookup(id:String) async throws -> LookupResponse {
         
         var components = baseAPIComponents(.lookup)

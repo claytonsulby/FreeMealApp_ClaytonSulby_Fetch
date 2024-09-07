@@ -29,6 +29,7 @@ struct MealList: View {
         })
         .listStyle(.plain)
         .navigationTitle(viewModel.filter)
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
