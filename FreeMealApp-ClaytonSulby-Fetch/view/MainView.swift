@@ -26,7 +26,9 @@ struct MainView: View {
                 MealsView(filter: category)
             }
             .onAppear {
-                path.append("Dessert")
+                if path.isEmpty {
+                    path.append("Dessert")
+                }
             }
         }
     }
