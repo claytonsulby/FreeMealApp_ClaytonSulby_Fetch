@@ -16,10 +16,24 @@ struct MealDetail: View {
     }
     
     var body: some View {
+        content()
+            .handleError(data: viewModel.meal, error: viewModel.error, retry: {
+                await viewModel.fetchMeal()
+            })
+            .navigationTitle("")
+        #if os(iOS)
+            .navigationBarTitleDisplayMode(.inline)
+        #endif
+            .task {
+                await viewModel.fetchMeal()
+            }
+    }
+
+    private func content() -> some View {
         ScrollView {
             VStack{
                 MealThumbnail(url: viewModel.getMealThumbnailURL())
-
+                
                 HStack{
                     Text(viewModel.meal?.strMeal ?? "Meal")
                         .font(.largeTitle)
@@ -28,23 +42,19 @@ struct MealDetail: View {
                 }.padding(.horizontal, 20.5)
                 
                 ExpandableModalSection("Instructions") { isExpanded in
-                    Text((viewModel.meal?.strInstructions ?? "") + "\(isExpanded.wrappedValue ? "" : "...")")
-                        .lineLimit(isExpanded.wrappedValue ? nil : 3)
+                    Text(viewModel.meal?.strInstructions ?? "")
+                        .lineLimit(isExpanded ? nil : 3)
                 }
                 
                 SimpleSection("Ingredients") {
                     ingredientsGrid()
                 }
             }
-        }.navigationTitle("")
-        .navigationBarTitleDisplayMode(.inline)
-            .task {
-                await viewModel.fetchMeal()
-            }
+        }
     }
     
     private func ingredientsGrid() -> some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading), GridItem(.adaptive(minimum: 150), alignment: .leading)], content: {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), alignment: .leading)], content: {
             ForEach(viewModel.getIngredients(), id:\.self) { ingredient in
                 Text(ingredient.ingredient)
                 Text(ingredient.measure)

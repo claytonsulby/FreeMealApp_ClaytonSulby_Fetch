@@ -10,10 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var viewModel:MealListViewModel = MealListViewModel()
-
+    
     var body: some View {
         NavigationSplitView {
-            MealList(filter: viewModel.filter, meals: viewModel.meals)
+            MealList(filter: viewModel.filter, meals: viewModel.meals ?? [])
+                .handleError(data: viewModel.meals, error: viewModel.error) {
+                    await viewModel.fetchMeals()
+                }
         } detail: {
             Text("Select a meal")
         }

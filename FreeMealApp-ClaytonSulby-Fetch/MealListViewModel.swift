@@ -11,18 +11,18 @@ import Foundation
 public class MealListViewModel : ObservableObject {
     
     var filter:String
-    @Published var meals:[FilterItem]
+    @Published var meals:[FilterItem]?
+    @Published var error:Error?
     
     init() {
         self.filter = "Dessert"
-        self.meals = []
     }
     
     public func fetchMeals() async {
         do {
             self.meals = try await FreeMealAPI.getFilter(filter: filter).meals
         } catch {
-            print(error)
+            self.error = error
         }
     }
     

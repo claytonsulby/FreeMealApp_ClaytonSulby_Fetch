@@ -23,8 +23,6 @@ struct MealThumbnail: View {
 fileprivate extension Image {
     
     func image() -> some View {
-        let screenSize: CGRect = UIScreen.main.bounds
-        
         return self
             .resizable()
             .antialiased(false)
@@ -36,7 +34,9 @@ fileprivate extension Image {
                     .foregroundColor(.secondary)
             )
             .cornerRadius(30)
-            .frame(minWidth: 0, maxWidth: screenSize.width / 2, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        #if os(iOS)
+            .frame(minWidth: 0, maxWidth: UIScreen.main.bounds.width / 2, minHeight: 0, maxHeight: .infinity, alignment: .center)
+        #endif
     }
 }
 

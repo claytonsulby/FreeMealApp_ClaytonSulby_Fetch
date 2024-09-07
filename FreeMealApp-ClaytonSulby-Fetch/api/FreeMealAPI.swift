@@ -16,10 +16,8 @@ public extension FreeMealAPI {
     static let baseURL = "https://themealdb.com/api/json/v1/1/"
 
     private enum APIPage : String {
-        
         case lookup = "lookup"
         case filter = "filter"
-        
     }
     
     private static func baseAPIComponents(_ page:APIPage) -> URLComponents {

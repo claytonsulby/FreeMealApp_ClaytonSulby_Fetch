@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EC7FABD52C8CC741005916B9 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FABD42C8CC741005916B9 /* MealDetailViewModel.swift */; };
 		EC7FABD82C8CCA5E005916B9 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FABD72C8CCA5E005916B9 /* Ingredient.swift */; };
+		EC7FABDA2C8CD437005916B9 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FABD92C8CD437005916B9 /* ErrorView.swift */; };
+		EC7FABDD2C8CD8D2005916B9 /* View+handleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FABDC2C8CD8D2005916B9 /* View+handleError.swift */; };
 		EC9ABA872C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */; };
 		EC9ABA892C88CAFE000F9C47 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9ABA882C88CAFE000F9C47 /* ContentView.swift */; };
 		EC9ABA8D2C88CB00000F9C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 /* Begin PBXFileReference section */
 		EC7FABD42C8CC741005916B9 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		EC7FABD72C8CCA5E005916B9 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		EC7FABD92C8CD437005916B9 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		EC7FABDC2C8CD8D2005916B9 /* View+handleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+handleError.swift"; sourceTree = "<group>"; };
 		EC9ABA832C88CAFE000F9C47 /* FreeMealApp-ClaytonSulby-Fetch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreeMealApp-ClaytonSulby-Fetch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC9ABA862C88CAFE000F9C47 /* FreeMealApp_ClaytonSulby_FetchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMealApp_ClaytonSulby_FetchApp.swift; sourceTree = "<group>"; };
 		EC9ABA882C88CAFE000F9C47 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,14 @@
 			path = dto;
 			sourceTree = "<group>";
 		};
+		EC7FABDB2C8CD8AE005916B9 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EC7FABDC2C8CD8D2005916B9 /* View+handleError.swift */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
 		EC9ABA7A2C88CAFE000F9C47 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +153,7 @@
 				ECAF0F2A2C8BE3ED0028CB28 /* viewmodel */,
 				EC9ABAB42C88D090000F9C47 /* view */,
 				EC9ABAB72C88D0B4000F9C47 /* api */,
+				EC7FABDB2C8CD8AE005916B9 /* extensions */,
 				EC9ABA8C2C88CB00000F9C47 /* Assets.xcassets */,
 				EC9ABA8E2C88CB00000F9C47 /* FreeMealApp_ClaytonSulby_Fetch.entitlements */,
 				EC9ABA8F2C88CB00000F9C47 /* Preview Content */,
@@ -217,6 +230,7 @@
 		ECAF0F252C8B71810028CB28 /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				EC7FABD92C8CD437005916B9 /* ErrorView.swift */,
 				ECAF0F212C8B70AE0028CB28 /* ExpandableModalSection.swift */,
 				ECAF0F232C8B71630028CB28 /* SectionButton.swift */,
 				ECAF0F262C8B76B20028CB28 /* SimpleSection.swift */,
@@ -365,11 +379,13 @@
 			files = (
 				EC9ABAB92C88D3A7000F9C47 /* FilterResponse.swift in Sources */,
 				ECAF0F222C8B70AE0028CB28 /* ExpandableModalSection.swift in Sources */,
+				EC7FABDA2C8CD437005916B9 /* ErrorView.swift in Sources */,
 				EC7FABD82C8CCA5E005916B9 /* Ingredient.swift in Sources */,
 				ECAF0F292C8B7FFD0028CB28 /* MealThumbnail.swift in Sources */,
 				EC9ABABD2C88D4C3000F9C47 /* NetworkError.swift in Sources */,
 				ECAF0F272C8B76B20028CB28 /* SimpleSection.swift in Sources */,
 				ECBB4ADA2C8A1CF00058CC15 /* MealList.swift in Sources */,
+				EC7FABDD2C8CD8D2005916B9 /* View+handleError.swift in Sources */,
 				EC9ABAC22C88D60A000F9C47 /* LookupResponse.swift in Sources */,
 				EC9ABABF2C88D4F8000F9C47 /* DecodeError.swift in Sources */,
 				ECBB4AD82C8A189C0058CC15 /* MealListElement.swift in Sources */,
@@ -544,6 +560,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch Meal";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -582,6 +599,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fetch Meal";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

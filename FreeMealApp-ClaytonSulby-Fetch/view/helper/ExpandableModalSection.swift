@@ -12,9 +12,9 @@ public struct ExpandableModalSection<Content:View> : View {
     var title:String
     @State var showMore:Bool = false
     var shouldShowMore:Bool
-    var content:(Binding<Bool>) -> Content
+    var content:(Bool) -> Content
     
-    public init(_ title:String, shouldShowMore:Bool = true, @ViewBuilder _ content: @escaping (Binding<Bool>) -> Content) {
+    public init(_ title:String, shouldShowMore:Bool = true, @ViewBuilder _ content: @escaping (Bool) -> Content) {
         self.title = title
         self.shouldShowMore = shouldShowMore
         self.content = content
@@ -38,7 +38,7 @@ public struct ExpandableModalSection<Content:View> : View {
                 }
             }
             
-            content(shouldShowMore ? .constant(false) : .constant(true))
+            content(shouldShowMore ? false : true)
             
             Divider()
             
@@ -48,8 +48,8 @@ public struct ExpandableModalSection<Content:View> : View {
                 NavigationView {
                     ScrollView(.vertical, showsIndicators: false) {
                         VStack(alignment: .center, spacing: 20) {
-                            content(.constant(true))
-                                .foregroundColor(.secondary)
+                            content(true)
+                                .foregroundColor(.primary)
                                 .padding(.horizontal, 20.5)
                         }
                     }.navigationTitle(title)

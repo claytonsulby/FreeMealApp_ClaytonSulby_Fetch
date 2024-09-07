@@ -12,6 +12,7 @@ public class MealDetailViewModel : ObservableObject {
     
     let id:String
     @Published var meal:LookupItem?
+    @Published var error:Error?
     
     init(id:String) {
         self.id = id
@@ -22,7 +23,7 @@ public class MealDetailViewModel : ObservableObject {
         do {
             self.meal = try await FreeMealAPI.getLookup(id: id).meals.first
         } catch {
-            print(error)
+            self.error = error
         }
     }
     

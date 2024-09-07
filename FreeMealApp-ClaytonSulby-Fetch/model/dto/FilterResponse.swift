@@ -19,7 +19,7 @@ public struct FilterResponse: Codable, Equatable {
 }
 
 // MARK: - FilterItem
-public struct FilterItem: Codable, Equatable {
+public struct FilterItem: Codable, Equatable, Hashable {
     public let strMeal, strMealThumb, id: String
     
     public static func == (lhs: FilterItem, rhs: FilterItem) -> Bool {

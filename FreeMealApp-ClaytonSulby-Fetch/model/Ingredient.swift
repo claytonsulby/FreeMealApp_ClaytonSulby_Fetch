@@ -7,12 +7,8 @@
 
 import Foundation
 
-public struct Ingredient: Equatable, Hashable {
+public struct Ingredient: Hashable, Identifiable {
+    public let id:UUID = UUID()
     let ingredient:String
     let measure:String
-    
-    public static func == (lhs: Ingredient, rhs: Ingredient) -> Bool {
-        return lhs.ingredient == rhs.ingredient &&
-        lhs.measure == rhs.measure
-    }
 }
