@@ -6,11 +6,15 @@
 import Foundation
 
 // MARK: - CategoryResponse
-public struct CategoryResponse: Codable {
+public struct CategoryResponse: Codable, Equatable {
     public let categories: [CategoryItem]
 
-    public init(categories: [CategoryItem]) {
+    public init(categories: [CategoryItem] = []) {
         self.categories = categories
+    }
+    
+    public static func == (lhs: CategoryResponse, rhs: CategoryResponse) -> Bool {
+        return lhs.categories == rhs.categories
     }
 }
 

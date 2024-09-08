@@ -80,11 +80,6 @@ fileprivate extension Image {
             .antialiased(false)
             .interpolation(.none)
             .aspectRatio(contentMode: .fit)
-            .overlay(
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(style: StrokeStyle(lineWidth: 0.1))
-                    .foregroundColor(.secondary)
-            )
             .cornerRadius(5)
             .frame(minWidth: 0, maxWidth: 100, minHeight: 0, maxHeight: 100, alignment: .center)
     }

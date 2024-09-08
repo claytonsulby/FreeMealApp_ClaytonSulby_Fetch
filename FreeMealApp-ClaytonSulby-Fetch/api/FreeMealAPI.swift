@@ -38,13 +38,12 @@ public extension FreeMealAPI {
     /// - [Example](https://themealdb.com/api/json/v1/1/categories.php)
     ///
     /// - Returns: list of CaregoryItem in CategoryResponse
-    static func getCategories() async throws -> CategoryResponse {
+    static func getCategories() async -> Result<CategoryResponse, Error> {
         
-        var components = baseAPIComponents(.caregories)
+        let components = baseAPIComponents(.caregories)
         let request = URLRequest(url: components.url!)
         
-        return try await agent.run(request)
-            .value
+        return await agent.run(request)
     }
     
     ///Gets all items of specificed filter
@@ -52,14 +51,13 @@ public extension FreeMealAPI {
     /// - [Example](https://themealdb.com/api/json/v1/1/filter.php?c=Dessert)
     ///
     /// - Returns: list of FilterItem in FilterResponse
-    static func getFilter(filter:String) async throws -> FilterResponse {
+    static func getFilter(filter:String) async -> Result<FilterResponse, Error> {
         
         var components = baseAPIComponents(.filter)
         components.queryItems?.append(contentsOf: [URLQueryItem(name: "c", value: filter)])
         let request = URLRequest(url: components.url!)
         
-        return try await agent.run(request)
-            .value
+        return await agent.run(request)
     }
     
     ///Looks up item of specified id
@@ -67,14 +65,13 @@ public extension FreeMealAPI {
     /// - [Example](https://themealdb.com/api/json/v1/1/lookup.php?i=52988)
     ///
     /// - Returns: list of LookupItem in LookupResponse
-    static func getLookup(id:String) async throws -> LookupResponse {
+    static func getLookup(id:String) async -> Result<LookupResponse, Error> {
         
         var components = baseAPIComponents(.lookup)
         components.queryItems?.append(contentsOf: [URLQueryItem(name: "i", value: id)])
         let request = URLRequest(url: components.url!)
         
-        return try await agent.run(request)
-            .value
+        return await agent.run(request)
     }
     
 }

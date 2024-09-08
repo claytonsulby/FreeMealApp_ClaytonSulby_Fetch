@@ -20,9 +20,11 @@ public class CategoriesViewModel : ObservableObject {
         categories = nil
         error = nil
         isLoading = true
-        do {
-            self.categories = try await FreeMealAPI.getCategories().categories
-        } catch {
+        let result = await FreeMealAPI.getCategories()
+        switch result {
+        case .success(let response):
+            self.categories = response.categories
+        case .failure(let error):
             self.error = error
         }
         isLoading = false

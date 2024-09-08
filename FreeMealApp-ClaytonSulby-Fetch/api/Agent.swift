@@ -6,26 +6,18 @@
 //
 
 import Foundation
-import Combine
 
-@available(iOS 13.0, macOS 10.15, *)
 struct Agent {
-    
-    struct Response<T> {
-        internal init(value: T, response: URLResponse) {
-            self.value = value
-            self.response = response
+
+    func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder()) async -> Result<T, Error> {
+        do {
+            let (data, response) = try await URLSession.shared.data(for: request)
+            try handleNetworkError(response: response)
+            let value:T = try handleDecodeError(data: data, decoder: decoder)
+            return .success(value)
+        } catch {
+            return .failure(error)
         }
-        
-        let value: T
-        let response: URLResponse
-    }
-    
-    func run<T: Decodable>(_ request: URLRequest, _ decoder: JSONDecoder = JSONDecoder()) async throws -> Response<T> {
-        let (data, response) = try await URLSession.shared.data(for: request)
-        try handleNetworkError(response: response)
-        let value:T = try handleDecodeError(data: data, decoder: decoder)
-        return Response(value: value, response: response)
     }
     
 }

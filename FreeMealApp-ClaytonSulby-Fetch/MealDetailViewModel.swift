@@ -24,9 +24,11 @@ public class MealDetailViewModel : ObservableObject {
         meal = nil
         error = nil
         isLoading = true
-        do {
-            self.meal = try await FreeMealAPI.getLookup(id: id).meals.first
-        } catch {
+        let result = await FreeMealAPI.getLookup(id: id)
+        switch result {
+        case .success(let response):
+            self.meal = response.meals.first
+        case .failure(let error):
             self.error = error
         }
         isLoading = false

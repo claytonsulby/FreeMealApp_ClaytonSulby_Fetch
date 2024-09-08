@@ -28,20 +28,14 @@ struct MealListElement: View {
             }
             .asyncImage()
 
-            VStack(alignment: .leading, spacing: 5.0){
-                VStack(alignment: .leading, spacing: 0.0){
-                    Text(subheadline)
-                        .subheadline()
-                    HStack(alignment: .top, spacing: 5.0){
-                        Text(title)
-                            .title()
-                    }
-                }
+            VStack(alignment: .leading, spacing: 0.0){
+                Text(subheadline)
+                    .subheadline()
+                Text(title)
+                    .title()
             }
             Spacer()
         }.contentShape(Rectangle())
-        
-        
     }
 }
 
