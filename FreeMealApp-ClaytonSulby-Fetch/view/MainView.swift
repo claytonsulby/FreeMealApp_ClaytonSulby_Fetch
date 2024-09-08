@@ -21,26 +21,30 @@ struct MainView: View {
         NavigationStack(path: $path) {
             List(viewModel.categories ?? [], id:\.self) { category in
                 NavigationLink(value: category) {
-                    Text("\(category.strCategory)")
+                    CategoriesListElement(url: URL(string: category.strCategoryThumb),
+                                          index: category.id, 
+                                          title: category.strCategory,
+                                          subtitle: category.strCategoryDescription)
                 }
             }
             .handleError(data: viewModel.categories, error: viewModel.error) {
                 await viewModel.fetchCategories()
             }
             .navigationTitle("Categories")
+            .listStyle(.plain)
             .navigationDestination(for: CategoryItem.self) { category in
                 MealsView(filter: category.strCategory)
             }
             .task {
                 guard (viewModel.categories == nil) else { return }
                 await viewModel.fetchCategories()
-                appendDesertPath()
+                appendDesertToPath()
             }
             .animation(.easeInOut, value: viewModel.isLoading)
         }
     }
     
-    private func appendDesertPath() {
+    private func appendDesertToPath() {
         guard let dessertCategory = viewModel.categories?.first(where: { category in
             category.strCategory == "Dessert"
         }) else { return }
