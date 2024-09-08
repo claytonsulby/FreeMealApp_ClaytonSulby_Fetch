@@ -10,10 +10,10 @@ import Foundation
 @MainActor
 public class MealDetailViewModel : ObservableObject {
     
-    let id:String
-    @Published var meal:LookupItem?
-    @Published var error:Error?
-    @Published var isLoading:Bool = false
+    public let id:String
+    @Published private(set) var meal:LookupItem?
+    @Published private(set) var error:Error?
+    @Published private(set) var isLoading:Bool = false
     
     init(id:String) {
         self.id = id
@@ -91,7 +91,7 @@ public class MealDetailViewModel : ObservableObject {
     
     public func getMealThumbnailURL() -> URL? {
         guard let meal = meal else { return nil }
-        return URL(string: meal.strMealThumb)
+        return URL(string: meal.thumbnail)
     }
     
 }

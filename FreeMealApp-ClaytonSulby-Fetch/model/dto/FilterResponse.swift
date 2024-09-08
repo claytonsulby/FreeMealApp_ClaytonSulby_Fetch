@@ -1,7 +1,7 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
+//   let filterResponse = try? JSONDecoder().decode(FilterResponse.self, from: jsonData)
 
 import Foundation
 
@@ -20,17 +20,17 @@ public struct FilterResponse: Codable, Equatable {
 
 // MARK: - FilterItem
 public struct FilterItem: Codable, Equatable, Hashable {
-    public let strMeal, strMealThumb, id: String
+    public let id, name, thumbnail: String
     
     public static func == (lhs: FilterItem, rhs: FilterItem) -> Bool {
-        return lhs.strMeal == rhs.strMeal &&
-        lhs.strMealThumb == rhs.strMealThumb &&
-        lhs.id == rhs.id
+        return lhs.id == rhs.id &&
+        lhs.name == rhs.name &&
+        lhs.thumbnail == rhs.thumbnail
     }
     
     enum CodingKeys: String, CodingKey {
-        case strMeal
-        case strMealThumb
+        case name = "strMeal"
+        case thumbnail = "strMealThumb"
         case id = "idMeal"
     }
 }

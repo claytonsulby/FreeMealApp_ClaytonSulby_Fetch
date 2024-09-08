@@ -1,5 +1,5 @@
 //
-//  Element.swift
+//  MealListElement.swift
 //  FreeMealApp-ClaytonSulby-Fetch
 //
 //  Created by Clayton Sulby on 9/5/24.

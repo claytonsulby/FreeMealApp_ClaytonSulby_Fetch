@@ -35,14 +35,14 @@ struct MealDetail: View {
                 MealThumbnail(url: viewModel.getMealThumbnailURL())
                 
                 HStack{
-                    Text(viewModel.meal?.strMeal ?? "Meal")
+                    Text(viewModel.meal?.name ?? "Meal")
                         .font(.largeTitle)
                         .fontWeight(.semibold)
                     Spacer()
                 }.padding(.horizontal, 20.5)
                 
                 ExpandableModalSection("Instructions") { isExpanded in
-                    Text(viewModel.meal?.strInstructions ?? "")
+                    Text(viewModel.meal?.instructions ?? "")
                         .lineLimit(isExpanded ? nil : 3)
                 }
                 

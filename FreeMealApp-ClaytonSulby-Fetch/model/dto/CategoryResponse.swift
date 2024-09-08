@@ -1,13 +1,13 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
+//   let categoryResponse = try? JSONDecoder().decode(CategoryResponse.self, from: jsonData)
 
 import Foundation
 
 // MARK: - CategoryResponse
 public struct CategoryResponse: Codable, Equatable {
-    public let categories: [CategoryItem]
+    let categories: [CategoryItem]
 
     public init(categories: [CategoryItem] = []) {
         self.categories = categories
@@ -18,23 +18,23 @@ public struct CategoryResponse: Codable, Equatable {
     }
 }
 
-// MARK: - Category
+// MARK: - CategoryItem
 public struct CategoryItem: Codable, Hashable, Identifiable {
-    public let id, strCategory: String
-    public let strCategoryThumb: String
-    public let strCategoryDescription: String
+    public let id, name: String
+    public let thumbnail: String
+    public let description: String
 
-    public init(id: String, strCategory: String, strCategoryThumb: String, strCategoryDescription: String) {
+    public init(id: String, name: String, thumbnail: String, description: String) {
         self.id = id
-        self.strCategory = strCategory
-        self.strCategoryThumb = strCategoryThumb
-        self.strCategoryDescription = strCategoryDescription
+        self.name = name
+        self.thumbnail = thumbnail
+        self.description = description
     }
     
     enum CodingKeys: String, CodingKey {
         case id = "idCategory"
-        case strCategory
-        case strCategoryThumb
-        case strCategoryDescription
+        case name = "strCategory"
+        case thumbnail = "strCategoryThumb"
+        case description = "strCategoryDescription"
     }
 }

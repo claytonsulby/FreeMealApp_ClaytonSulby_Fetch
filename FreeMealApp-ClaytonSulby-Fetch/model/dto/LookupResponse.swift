@@ -1,13 +1,13 @@
 // This file was generated from JSON Schema using quicktype, do not modify it directly.
 // To parse the JSON, add this file to your project and do:
 //
-//   let welcome = try? JSONDecoder().decode(Welcome.self, from: jsonData)
+//   let lookupResponse = try? JSONDecoder().decode(LookupResponse.self, from: jsonData)
 
 import Foundation
 
 // MARK: - LookupResponse
 public struct LookupResponse: Codable, Equatable {
-    public let meals: [LookupItem]
+    let meals: [LookupItem]
 
     public init(meals: [LookupItem] = []) {
         self.meals = meals
@@ -20,9 +20,9 @@ public struct LookupResponse: Codable, Equatable {
 
 // MARK: - LookupItem
 public struct LookupItem: Codable, Equatable, Identifiable {
-    public let id, strMeal: String
-    public let strInstructions: String
-    public let strMealThumb: String
+    public let id, name: String
+    public let instructions: String
+    public let thumbnail: String
     public let strIngredient1, strIngredient2, strIngredient3, strIngredient4: String?
     public let strIngredient5, strIngredient6, strIngredient7, strIngredient8: String?
     public let strIngredient9, strIngredient10, strIngredient11, strIngredient12: String?
@@ -36,9 +36,9 @@ public struct LookupItem: Codable, Equatable, Identifiable {
 
     public static func == (lhs: LookupItem, rhs: LookupItem) -> Bool {
         return lhs.id == rhs.id &&
-        lhs.strMeal == rhs.strMeal &&
-        lhs.strInstructions == rhs.strInstructions &&
-        lhs.strMealThumb == rhs.strMealThumb &&
+        lhs.name == rhs.name &&
+        lhs.instructions == rhs.instructions &&
+        lhs.thumbnail == rhs.thumbnail &&
         lhs.strIngredient1 == rhs.strIngredient1 &&
         lhs.strIngredient2 == rhs.strIngredient2 &&
         lhs.strIngredient3 == rhs.strIngredient3 &&
@@ -83,9 +83,9 @@ public struct LookupItem: Codable, Equatable, Identifiable {
     
     enum CodingKeys: String, CodingKey {
         case id = "idMeal"
-        case strMeal
-        case strInstructions
-        case strMealThumb
+        case name = "strMeal"
+        case instructions = "strInstructions"
+        case thumbnail = "strMealThumb"
         case strIngredient1
         case strIngredient2
         case strIngredient3

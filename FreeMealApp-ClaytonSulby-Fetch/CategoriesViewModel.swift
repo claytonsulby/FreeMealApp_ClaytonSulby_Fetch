@@ -10,9 +10,9 @@ import Foundation
 @MainActor
 public class CategoriesViewModel : ObservableObject {
     
-    @Published var categories:[CategoryItem]?
-    @Published var error:Error?
-    @Published var isLoading:Bool = false
+    @Published private(set) var categories:[CategoryItem]?
+    @Published private(set) var error:Error?
+    @Published private(set) var isLoading:Bool = false
     
     init() {}
     

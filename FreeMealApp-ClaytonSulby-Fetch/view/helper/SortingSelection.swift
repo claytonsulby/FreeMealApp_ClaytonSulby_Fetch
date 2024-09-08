@@ -55,7 +55,7 @@ struct SortingSelection<T>: View {
 
 #Preview {
     let sortingSchemes:[String:(FilterItem, FilterItem) -> Bool] = [
-        "Name":{ $0.strMeal < $1.strMeal },
+        "Name":{ $0.name < $1.name },
         "Id":{ $0.id < $1.id }
     ]
     

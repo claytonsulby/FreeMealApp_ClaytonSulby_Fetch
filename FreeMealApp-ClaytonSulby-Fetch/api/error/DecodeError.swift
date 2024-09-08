@@ -1,8 +1,8 @@
 //
-//  File.swift
+//  DecodeError.swift
+//  FreeMealApp-ClaytonSulby-Fetch
 //
-//
-//  Created by Clayton Sulby on 3/10/24.
+//  Created by Clayton Sulby on 9/4/24.
 //
 
 import Foundation

@@ -1,8 +1,8 @@
 //
-//  SwiftUIView.swift
+//  ExpandableModalSection.swift
+//  FreeMealApp-ClaytonSulby-Fetch
 //
-//
-//  Created by Clayton Sulby on 7/20/23.
+//  Created by Clayton Sulby on 9/4/24.
 //
 
 import SwiftUI

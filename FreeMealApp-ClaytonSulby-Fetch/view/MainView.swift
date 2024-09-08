@@ -20,11 +20,11 @@ struct MainView: View {
     var body: some View {
         NavigationStack(path: $path) {
             List(viewModel.categories ?? [], id:\.self) { category in
-                NavigationLink(value: category) {
-                    CategoriesListElement(url: URL(string: category.strCategoryThumb),
-                                          index: category.id, 
-                                          title: category.strCategory,
-                                          subtitle: category.strCategoryDescription)
+                NavigationLink(value: category.name) {
+                    CategoriesListElement(url: URL(string: category.thumbnail),
+                                          index: category.id,
+                                          title: category.name,
+                                          subtitle: category.description)
                 }
             }
             .handleError(data: viewModel.categories, error: viewModel.error) {
@@ -32,23 +32,18 @@ struct MainView: View {
             }
             .navigationTitle("Categories")
             .listStyle(.plain)
-            .navigationDestination(for: CategoryItem.self) { category in
-                MealsView(filter: category.strCategory)
+            .navigationDestination(for: String.self) { category in
+                MealsView(filter: category)
+            }
+            .onAppear {
+                self.path.append("Dessert")
             }
             .task {
                 guard (viewModel.categories == nil) else { return }
                 await viewModel.fetchCategories()
-                appendDesertToPath()
             }
             .animation(.easeInOut, value: viewModel.isLoading)
         }
-    }
-    
-    private func appendDesertToPath() {
-        guard let dessertCategory = viewModel.categories?.first(where: { category in
-            category.strCategory == "Dessert"
-        }) else { return }
-        path.append(dessertCategory)
     }
 }
 

@@ -1,5 +1,5 @@
 //
-//  FilterList.swift
+//  MealList.swift
 //  FreeMealApp-ClaytonSulby-Fetch
 //
 //  Created by Clayton Sulby on 9/5/24.
@@ -18,7 +18,7 @@ struct MealList: View {
     var body: some View {
         List(viewModel.getSortedList()) { meal in
             NavigationLink(value: meal) {
-                MealListElement(url: viewModel.getThumbnailURL(meal), index: meal.id, subheadline: viewModel.filter, title: meal.strMeal)
+                MealListElement(url: viewModel.getThumbnailURL(meal), index: meal.id, subheadline: viewModel.filter, title: meal.name)
             }
         }
         .navigationDestination(for: FilterItem.self) {
@@ -36,7 +36,7 @@ struct MealList: View {
 
 #Preview {
     MealList(filter: "Dessert", meals: [
-        FilterItem(strMeal: "Bread and Butter Pudding", strMealThumb: "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg", id: "52792"),
-        FilterItem(strMeal: "Apple & Blackberry Crumble", strMealThumb: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg", id: "52893"),
+        FilterItem(id: "52792", name: "Bread and Butter Pudding", thumbnail: "https://www.themealdb.com/images/media/meals/xqwwpy1483908697.jpg"),
+        FilterItem(id: "52893", name: "Apple & Blackberry Crumble", thumbnail: "https://www.themealdb.com/images/media/meals/xvsurr1511719182.jpg")
     ])
 }

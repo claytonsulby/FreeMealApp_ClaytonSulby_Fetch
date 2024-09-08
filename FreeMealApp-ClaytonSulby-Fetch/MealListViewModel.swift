@@ -9,13 +9,13 @@ import Foundation
 
 public class MealListViewModel : ObservableObject {
     
-    public var filter:String
-    public var meals:[FilterItem]
-    @Published var selectedSortingScheme:String = "Name"
-    @Published var isAscending:Bool = true
+    let filter:String
+    let meals:[FilterItem]
+    @Published public var selectedSortingScheme:String = "Name"
+    @Published public var isAscending:Bool = true
     
     public let sortingSchemes:[String:(FilterItem, FilterItem) -> Bool] = [
-        "Name":{ $0.strMeal < $1.strMeal },
+        "Name":{ $0.name < $1.name },
         "Id":{ $0.id < $1.id }
     ]
     
@@ -26,7 +26,7 @@ public class MealListViewModel : ObservableObject {
 
     public func getSortedList() -> [FilterItem] {
         guard let sortingScheme = sortingSchemes[selectedSortingScheme] else {
-            return meals.sorted(by: { $0.strMeal < $1.strMeal  })
+            return meals.sorted(by: { $0.name < $1.name  })
         }
         
         let sortedList = meals.sorted(by: { sortingScheme($0, $1) })
@@ -34,7 +34,7 @@ public class MealListViewModel : ObservableObject {
     }
     
     public func getThumbnailURL(_ meal: FilterItem) -> URL? {
-        return URL(string: meal.strMealThumb)
+        return URL(string: meal.thumbnail)
     }
 
 }

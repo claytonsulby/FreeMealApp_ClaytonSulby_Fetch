@@ -1,5 +1,5 @@
 //
-//  MealListViewModel.swift
+//  MealsViewModel.swift
 //  FreeMealApp-ClaytonSulby-Fetch
 //
 //  Created by Clayton Sulby on 9/6/24.
@@ -10,10 +10,10 @@ import Foundation
 @MainActor
 public class MealsViewModel : ObservableObject {
     
-    var filter:String
-    @Published var meals:[FilterItem]?
-    @Published var error:Error?
-    @Published var isLoading:Bool = false
+    public let filter:String
+    @Published private(set) var meals:[FilterItem]?
+    @Published private(set) var error:Error?
+    @Published private(set) var isLoading:Bool = false
     
     init(filter:String) {
         self.filter = filter
