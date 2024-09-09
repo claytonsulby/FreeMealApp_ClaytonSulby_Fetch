@@ -36,6 +36,7 @@ struct MainView: View {
                 MealsView(filter: category)
             }
             .onAppear {
+                guard path.isEmpty else { return }
                 self.path.append("Dessert")
             }
             .task {
