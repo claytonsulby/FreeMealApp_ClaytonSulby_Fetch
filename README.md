@@ -1,6 +1,6 @@
 # Hello Fetch
 
-Thank you for providing me with this coding challenge. Please find breif documentation on how to navigate the application.
+Thank you for providing me with this coding challenge. Please find brief documentation on how to navigate the application.
 
 ## Meals
 Upon opening the application, you will find yourself on the "Dessert" meals list. You can sort the list by tapping in the top right "Name ^" menu button and changing "Ascending" to "Descending" or tapping "Id" instead of "Name"
